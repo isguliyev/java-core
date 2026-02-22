@@ -5,6 +5,11 @@ public class DivideNumbers {
             System.exit(1);
         }
 
+        if (args.length == 1) {
+            System.err.println("at least 2 arguments are required");
+            System.exit(1);
+        }
+
         double result = 0;
 
         try {
