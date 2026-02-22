@@ -16,14 +16,16 @@ public class DivideNumbers {
             result = Double.valueOf(args[0]);
 
             for (int i = 1; i < args.length; i++) {
+                double divisor = Double.valueOf(args[i]);
+
                 System.out.printf(
                     "%f / %f = %f\n",
                     result,
-                    Double.valueOf(args[i]),
-                    result / Double.valueOf(args[i])
+                    divisor,
+                    result / divisor
                 );
 
-                result /= Double.valueOf(args[i]);
+                result /= divisor;
             }
         } catch (NumberFormatException numberFormatException) {
             System.err.println("arguments must be real numbers");
