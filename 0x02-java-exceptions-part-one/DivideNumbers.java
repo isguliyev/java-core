@@ -1,0 +1,26 @@
+public class DivideNumbers {
+    public static void main(String[] args) {
+        double result = 0;
+
+        try {
+            result = Double.valueOf(args[0]);
+
+            for (int i = 1; i < args.length; i++) {
+                System.out.printf(
+                    "%f / %f = %f\n",
+                    result,
+                    Double.valueOf(args[i]),
+                    result / Double.valueOf(args[i])
+                );
+
+                result /= Double.valueOf(args[i]);
+            }
+        } catch (NumberFormatException numberFormatException) {
+            System.err.println(numberFormatException.toString());
+            System.exit(1);
+        } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+            System.err.println(arrayIndexOutOfBoundsException.toString());
+            System.exit(1);
+        }
+    }
+}
