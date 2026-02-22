@@ -1,5 +1,10 @@
 public class DivideNumbers {
     public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Usage: DivideNumbers <number> <number> ... <number>");
+            System.exit(0);
+        }
+
         double result = 0;
 
         try {
