@@ -1,4 +1,4 @@
-public class PrintFloatingVaiable {
+public class PrintFloatVariable {
     public static void main(String[] args) {
         final float pi = 3.14159f;
 
