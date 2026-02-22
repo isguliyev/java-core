@@ -21,10 +21,7 @@ public class DivideNumbers {
                 result /= Double.valueOf(args[i]);
             }
         } catch (NumberFormatException numberFormatException) {
-            System.err.println(numberFormatException.toString());
-            System.exit(1);
-        } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
-            System.err.println(arrayIndexOutOfBoundsException.toString());
+            System.err.println("arguments must be real numbers");
             System.exit(1);
         }
     }
