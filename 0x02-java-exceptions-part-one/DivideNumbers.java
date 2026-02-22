@@ -6,7 +6,7 @@ public class DivideNumbers {
         }
 
         if (args.length == 1) {
-            System.err.println("at least 2 arguments are required");
+            System.err.println("At least 2 arguments are required.");
             System.exit(1);
         }
 
@@ -28,7 +28,7 @@ public class DivideNumbers {
                 result /= divisor;
             }
         } catch (NumberFormatException numberFormatException) {
-            System.err.println("arguments must be real numbers");
+            System.err.println("Arguments must be real numbers.");
             System.exit(1);
         }
     }

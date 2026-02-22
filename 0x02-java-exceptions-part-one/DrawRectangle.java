@@ -12,12 +12,12 @@ public class DrawRectangle {
             width = Integer.parseInt(args[0]);
             height = Integer.parseInt(args[1]);
         } catch (NumberFormatException numberFormatException) {
-            System.err.println("width and height must be positive integers");
+            System.err.println("Width and height must be positive integers.");
             System.exit(1);
         }
 
         if (width  <= 0 || height <= 0) {
-            System.err.println("width and height must be positive integers");
+            System.err.println("Width and height must be positive integers.");
             System.exit(1);
         }
 

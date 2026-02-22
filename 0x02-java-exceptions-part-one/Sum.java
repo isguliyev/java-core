@@ -12,7 +12,7 @@ public class Sum {
                 sum += Integer.parseInt(args[i]);
             }
         } catch (NumberFormatException numberFormatException) {
-            System.err.println(numberFormatException.toString());
+            System.err.println("Arguments must be real numbers.");
             System.exit(1);
         }
 
