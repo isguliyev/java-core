@@ -1,5 +1,10 @@
 public class Sum {
     public static void main(String[] args) {
+        if (args.length == 0) {
+            System.err.println("Usage: Sum <number> <number> ... <number>");
+            System.exit(1);
+        }
+
         int sum = 0;
 
         try {
