@@ -1,0 +1,49 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class Order {
+    private List<CookieOrder> cookies;
+
+    public Order() {
+        setCookies(new ArrayList<CookieOrder>());
+    }
+
+    public int removeFlavor(String flavor) {
+        int boxesRemoved = 0;
+
+        List<CookieOrder> flavorsToRemove = new ArrayList<CookieOrder>();
+
+        for (CookieOrder cookieOrder : this.cookies) {
+            if (cookieOrder.getFlavor().equals(flavor)) {
+                flavorsToRemove.add(cookieOrder);
+                boxesRemoved += cookieOrder.getBoxQuantity();
+            }
+        }
+
+        this.cookies.removeAll(flavorsToRemove);
+
+        return boxesRemoved;
+    }
+
+    public int getTotalBoxes() {
+        int totalBoxes = 0;
+
+        for (CookieOrder cookieOrder : this.cookies) {
+            totalBoxes += cookieOrder.getBoxQuantity();
+        }
+
+        return totalBoxes;
+    }
+
+    public void addCookieOrder(CookieOrder cookieOrder) {
+        this.cookies.add(cookieOrder);
+    }
+
+    public List<CookieOrder> getCookies() {
+        return this.cookies;
+    }
+
+    public void setCookies(List<CookieOrder> cookies) {
+        this.cookies = cookies;
+    }
+}
