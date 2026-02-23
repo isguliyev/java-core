@@ -2,7 +2,7 @@ public class Order {
     private double discountPercentage;
     private OrderItem[] orderItems;
 
-    Order(double discountPercentage, OrderItem[] orderItems) {
+    public Order(double discountPercentage, OrderItem[] orderItems) {
         setDiscountPercentage(discountPercentage);
         setOrderItems(orderItems);
     }
