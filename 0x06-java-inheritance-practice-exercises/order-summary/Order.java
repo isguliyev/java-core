@@ -2,7 +2,7 @@ public class Order {
     private double discountPercentage;
     private OrderItem[] orderItems;
 
-    Order(double discountPercentage, OrderItem[] orderItems) {
+    public Order(double discountPercentage, OrderItem[] orderItems) {
         setDiscountPercentage(discountPercentage);
         setOrderItems(orderItems);
     }
@@ -12,17 +12,17 @@ public class Order {
 
         System.out.println("------- ORDER SUMMARY -------");
 
-        for (OrderItem OrderItem: orderItems) {
+        for (OrderItem orderItem: orderItems) {
             System.out.printf(
                 "Type: %s Title: %s  Price: %.2f  Quant: %d  Total: %.2f\n",
-                OrderItem.getProduct().getClass().getSimpleName(),
-                OrderItem.getProduct().getTitle(),
-                OrderItem.getProduct().getNetPrice(),
-                OrderItem.getQuantity(),
-                OrderItem.getProduct().getNetPrice() * OrderItem.getQuantity()
+                orderItem.getProduct().getClass().getSimpleName(),
+                orderItem.getProduct().getTitle(),
+                orderItem.getProduct().getNetPrice(),
+                orderItem.getQuantity(),
+                orderItem.getProduct().getNetPrice() * orderItem.getQuantity()
             );
 
-            total += OrderItem.getProduct().getNetPrice() * OrderItem.getQuantity();
+            total += orderItem.getProduct().getNetPrice() * orderItem.getQuantity();
         }
 
         System.out.println("----------------------------");
