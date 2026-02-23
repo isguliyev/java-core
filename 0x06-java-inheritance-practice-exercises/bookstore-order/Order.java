@@ -4,14 +4,14 @@ public class Order {
 
     Order(double discountPercentage, OrderItem[] orderItems) {
         setDiscountPercentage(discountPercentage);
-        setItems(orderItems);
+        setOrderItems(orderItems);
     }
 
     public double calculateTotal() {
         double total = 0.0d;
 
-        for (OrderItem OrderItem : orderItems) {
-            total += OrderItem.getProduct().getNetPrice() * OrderItem.getQuantity();
+        for (OrderItem orderItem : orderItems) {
+            total += orderItem.getProduct().getNetPrice() * orderItem.getQuantity();
         }
 
         return total * (1.0d - this.discountPercentage / 100.0d);
@@ -21,7 +21,7 @@ public class Order {
         return this.discountPercentage;
     }
 
-    public OrderItem[] getItems() {
+    public OrderItem[] getOrderItems() {
         return this.orderItems;
     }
 
@@ -29,7 +29,7 @@ public class Order {
         this.discountPercentage = discountPercentage;
     }
 
-    public void setItems(OrderItem[] orderItems) {
+    public void setOrderItems(OrderItem[] orderItems) {
         this.orderItems = orderItems;
     }
 }

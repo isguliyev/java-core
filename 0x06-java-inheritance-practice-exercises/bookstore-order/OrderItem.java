@@ -4,7 +4,7 @@ public class OrderItem {
     private Product product;
     private int quantity;
 
-    OrderItem(Product product, int quantity) {
+    public OrderItem(Product product, int quantity) {
         setProduct(product);
         setQuantity(quantity);
     }
